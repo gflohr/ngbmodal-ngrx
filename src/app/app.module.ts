@@ -8,22 +8,22 @@ import { reducers, metaReducers } from './reducers';
 import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
-  declarations: [
-    AppComponent,
-    CounterComponent
-  ],
-  imports: [
-    BrowserModule,
-    NgbModule,
-    StoreModule.forRoot(reducers, {
-      metaReducers,
-      runtimeChecks: {
-        strictStateImmutability: true,
-        strictActionImmutability: true
-      }
-    })
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
+	declarations: [
+		AppComponent,
+		CounterComponent
+	],
+	imports: [
+		BrowserModule,
+		NgbModule,
+		StoreModule.forRoot(reducers, {
+			metaReducers,
+			runtimeChecks: {
+				strictStateImmutability: true,
+				strictActionImmutability: true
+			}
+		})
+	],
+	providers: [],
+	bootstrap: [AppComponent]
 })
 export class AppModule { }

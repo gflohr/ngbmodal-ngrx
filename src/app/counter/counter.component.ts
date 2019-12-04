@@ -6,26 +6,26 @@ import { AppState, selectCounterCurrent } from '../reducers';
 import * as CounterActions from '../counter.actions';
 
 @Component({
-  selector: 'app-counter',
-  templateUrl: './counter.component.html',
-  styleUrls: ['./counter.component.css']
+	selector: 'app-counter',
+	templateUrl: './counter.component.html',
+	styleUrls: ['./counter.component.css']
 })
 export class CounterComponent {
-  counter$ = this.store.pipe(select(selectCounterCurrent));
+	counter$ = this.store.pipe(select(selectCounterCurrent));
 
-  constructor(
-    private store: Store<AppState>
-  ) {}
+	constructor(
+		private store: Store<AppState>
+	) {}
 
-  onIncrement() {
-    this.store.dispatch(CounterActions.increment());
-  }
+	onIncrement() {
+		this.store.dispatch(CounterActions.increment());
+	}
 
-  onDecrement() {
-    this.store.dispatch(CounterActions.decrement());
-  }
+	onDecrement() {
+		this.store.dispatch(CounterActions.decrement());
+	}
 
-  onReset() {
-    this.store.dispatch(CounterActions.reset());
-  }
+	onReset() {
+		this.store.dispatch(CounterActions.reset());
+	}
 }
