@@ -26,6 +26,6 @@ export class CounterComponent {
 	}
 
 	onReset() {
-		this.store.dispatch(CounterActions.reset());
+		this.store.dispatch(CounterActions.resetConfirmation());
 	}
 }
