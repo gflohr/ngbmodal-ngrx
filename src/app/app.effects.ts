@@ -5,7 +5,7 @@ import { map, exhaustMap, catchError } from 'rxjs/operators';
 import * as CounterActions from './counter.actions';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { ResetConfirmationComponent } from './reset-confirmation/reset-confirmation.component';
-import { of } from 'rxjs';
+import { of, from } from 'rxjs';
 
 @Injectable()
 export class AppEffects {
@@ -14,16 +14,17 @@ export class AppEffects {
 		private modalService: NgbModal
 	) {}
 
-	runDialog = content => {
+	runDialog = function(content) {
 		const modalRef = this.modalService.open(content, { centered: true });
 
-		return modalRef.result;
+		return from(modalRef.result);
 	};
 
 	resetConfirmation$ = createEffect(() => this.actions$.pipe(
 		ofType(CounterActions.resetConfirmation),
-		exhaustMap(() => this.runDialog(ResetConfirmationComponent)),
-		map(() => CounterActions.reset()),
-		catchError(() => of(CounterActions.resetConfirmationDismiss()))
+		exhaustMap(() => this.runDialog(ResetConfirmationComponent).pipe(
+			map(() => CounterActions.reset()),
+			catchError(() => of(CounterActions.resetConfirmationDismiss()))
+		))
 	));
 }
