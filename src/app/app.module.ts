@@ -7,11 +7,16 @@ import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
 import { CounterComponent } from './counter/counter.component';
 import { ResetConfirmationComponent } from './reset-confirmation/reset-confirmation.component';
+import { EffectsModule } from '@ngrx/effects';
+import { AppEffects } from './app.effects';
 
 @NgModule({
 	declarations: [
 		AppComponent,
 		CounterComponent,
+		ResetConfirmationComponent
+	],
+	entryComponents: [
 		ResetConfirmationComponent
 	],
 	imports: [
@@ -23,7 +28,8 @@ import { ResetConfirmationComponent } from './reset-confirmation/reset-confirmat
 				strictStateImmutability: true,
 				strictActionImmutability: true
 			}
-		})
+		}),
+		EffectsModule.forRoot([AppEffects])
 	],
 	providers: [],
 	bootstrap: [AppComponent]

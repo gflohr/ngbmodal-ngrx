@@ -1,15 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
+import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
-  selector: 'app-reset-confirmation',
-  templateUrl: './reset-confirmation.component.html',
-  styleUrls: ['./reset-confirmation.component.css']
+	selector: 'app-reset-confirmation',
+	templateUrl: './reset-confirmation.component.html',
+	styleUrls: ['./reset-confirmation.component.css']
 })
-export class ResetConfirmationComponent implements OnInit {
+export class ResetConfirmationComponent {
 
-  constructor() { }
-
-  ngOnInit() {
-  }
+	constructor(
+		public activeModal: NgbActiveModal
+	) { }
 
 }

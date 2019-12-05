@@ -5,5 +5,5 @@ export const decrement = createAction('[Counter Component] Decrement');
 export const reset = createAction('[Counter Component] Reset');
 export const resetConfirmation
         = createAction('[Counter Component] Reset Confirmation');
-export const resetConfirmationDismissed
+export const resetConfirmationDismiss
         = createAction('[Counter Component] Reset Confirmation Dismissed');
