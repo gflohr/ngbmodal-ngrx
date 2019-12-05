@@ -6,11 +6,13 @@ import { AppComponent } from './app.component';
 import { StoreModule } from '@ngrx/store';
 import { reducers, metaReducers } from './reducers';
 import { CounterComponent } from './counter/counter.component';
+import { ResetConfirmationComponent } from './reset-confirmation/reset-confirmation.component';
 
 @NgModule({
 	declarations: [
 		AppComponent,
-		CounterComponent
+		CounterComponent,
+		ResetConfirmationComponent
 	],
 	imports: [
 		BrowserModule,
