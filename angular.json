@@ -112,6 +112,6 @@
           }
         }
       }
-    }},
-  "defaultProject": "ngrx-counter"
+    }
+  }
 }
