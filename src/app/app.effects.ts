@@ -15,7 +15,7 @@ export class AppEffects {
 	) {}
 
 	runDialog = (content: any) => {
-		const modalRef = this.modalService.open(content, { centered: true });
+		const modalRef = this.modalService.open(content, { backdrop: false, centered: false });
 
 		return from(modalRef.result);
 	};
