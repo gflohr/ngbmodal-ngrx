@@ -11,12 +11,12 @@
 <div class="modal-footer">
 	<button type="button" class="btn btn-secondary"
 			(click)="activeModal.dismiss('cancel')"
-			[attr.arial-label]="Cancel" translate>
+			aria-label="Cancel" translate>
 			Cancel
 	</button>
 	<button type="button" class="btn btn-primary btn-default"
 			(click)="activeModal.close('logout')"
-			ngbAutofocus [attr.arial-label]="Reset" translate>
+			ngbAutofocus aria-label="Reset" translate>
 			Reset
 	</button>
 </div>
