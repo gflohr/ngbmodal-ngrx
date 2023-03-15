@@ -14,7 +14,7 @@ export class AppEffects {
 		private modalService: NgbModal
 	) {}
 
-	runDialog = function(content) {
+	runDialog = (content: any) => {
 		const modalRef = this.modalService.open(content, { centered: true });
 
 		return from(modalRef.result);
