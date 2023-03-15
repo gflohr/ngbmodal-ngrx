@@ -19,7 +19,7 @@
     "@ng-bootstrap/ng-bootstrap": "^14.0.1",
     "@ngrx/effects": "^15.3.0",
     "@ngrx/store": "^15.3.0",
-    "bootstrap": "^4.4.1",
+    "bootstrap": "^5.2.3",
     "rxjs": "~7.8.0",
     "tslib": "^2.3.0",
     "zone.js": "~0.13.0"
@@ -28,7 +28,7 @@
     "@angular-devkit/build-angular": "^15.2.3",
     "@angular/cli": "^15.2.3",
     "@angular/compiler-cli": "^15.2.2",
-    "@angular/language-service": "^14.3.0",
+    "@angular/language-service": "^15.2.2",
     "@types/jasmine": "~4.3.0",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.1",
