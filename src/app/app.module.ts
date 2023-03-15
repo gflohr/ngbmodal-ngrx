@@ -16,9 +16,6 @@ import { AppEffects } from './app.effects';
 		CounterComponent,
 		ResetConfirmationComponent
 	],
-	entryComponents: [
-		ResetConfirmationComponent
-	],
 	imports: [
 		BrowserModule,
 		NgbModule,
